@@ -16,18 +16,27 @@ const mockData = [
       id: 3,
       title: 'Take out the trash',
       completed: false,
+      dueDate: '2023-05-01',
+      finishDate: '',
+  
     },
     {
       userId: 1,
       id: 4,
       title: 'Write a blog post',
       completed: true,
+      dueDate: '2023-06-01',
+      finishDate: '',
+  
     },
     {
       userId: 1,
       id: 5,
       title: 'Go out for a walk',
       completed: false,
+      dueDate: '2022-05-01',
+      finishDate: '',
+  
     },
   ];
   
