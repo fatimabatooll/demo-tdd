@@ -32,9 +32,15 @@ const TodoItem = ({ todo, removeHandler, updateTodo }) => {
       <div className="todo-item-title">
         {!editing ? (
           <>
-            <input type="checkbox" checked={completed} onChange={() => setCompleted(!completed)} />
+            <input
+              type="checkbox"
+              checked={completed}
+              onChange={() => setCompleted(!completed)}
+              data-testid={`checkbox-${todo.id}`}
+            />
             <span
               className={`title-text ${completed ? 'completed' : ''}`}
+              data-testid={`title-${todo.id}`}
             >
               {title}
             </span>
@@ -60,7 +66,9 @@ const TodoItem = ({ todo, removeHandler, updateTodo }) => {
         )}
       </div>
       <div className="todo-item-delete">
-        <button onClick={() => removeHandler(todo.id)}>X</button>
+        <button data-testid={`close-btn-${todo.id}`} onClick={() => removeHandler(todo.id)}>
+          X
+        </button>
       </div>
     </div>
   );
